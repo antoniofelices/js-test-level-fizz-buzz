@@ -56,8 +56,17 @@ const createEntryObject = (value) => {
 }
 
 const saveEntryObject = (value) => {
-    const resultToSave = createEntryObject(value)
-    results.push(resultToSave)
+    try {
+        const resultToSave = createEntryObject(value)
+        results.push(resultToSave)
+    } catch (error) {
+        const resultsLocal = []
+        const messageNotConnect =
+            'Cannot connect to the external database, saving data in local'
+        const resultToSaveLocal = createEntryObject(value)
+        resultsLocal.push(resultToSaveLocal)
+        console.error(`${error.message}. ${messageNotConnect}`)
+    }
 }
 
 export { createEntryObject, saveEntryObject }
