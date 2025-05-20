@@ -38,4 +38,36 @@ describe('FizzBuzz test for multiples of 3 and 5', () => {
         expect(result).toEqual(expectedReturn)
         expect(result.data.output).toBe('Buzz')
     })
+    test.skip('returns Buzz when multiple of 5', () => {
+        //Gherking test
+        /**
+         * Scenario: Número divisible por 5
+         * Given un número 10
+         * When el número es procesado
+         * Then se muestra "Buzz"
+         */
+        // Arrange
+        // Act
+        // Assert
+    })
+
+    test.skip('returns FizzBuzz when multiple of 3 and 5', () => {
+        //Gherking test
+        /**
+         * Scenario: Número divisible por 3 y 5
+         * Given un número 15
+         * When el número es procesado
+         * Then se muestra "FizzBuzz"
+         */
+    })
+
+    test.skip('returns number when is not multiple of 3 and 5', () => {
+        //Gherking test
+        /**
+         * Scenario: Número no divisible por 3 ni 5
+         * Given un número 8
+         * When el número es procesado
+         * Then se muestra el número ingresado
+         */
+    })
 })
