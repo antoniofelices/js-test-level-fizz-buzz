@@ -1,16 +1,62 @@
-# Prueba de Nivel - JavaScript y ES6
+# Fizz Buzz Test
 
-## Objetivo de la Prueba
+## Description
 
-Este ejercicio tiene como objetivo evaluar tus conocimientos en JavaScript moderno (ES6+), incluyendo manipulación del DOM, estructuras de control, loops, operadores, manipulación de objetos, funciones y control de errores.
+Practice, practice and practice… Data is captured and then moved on. Manipulate the DOM to achieve the desired result. Using Vite and Vitest.
 
-Los ejercicios están diseñados para medir la comprensión y aplicación de estos conceptos sin depender de la memorización.
+### Some decisions
 
----
+-   Use Vite and Vitest as development tools.
+-   Refactor the folder structure of the base project.
+-   Create dummy data file to save data.
+-   Add modules path
 
-## Instrucciones
+## Technologies
 
-- Lee atentamente cada pregunta/escenario antes de responder.
-- Usa JavaScript moderno (ES6+).
-- Recuerda ir un paso a la vez, por eso se dan casos de uso. Logra que funcione uno, luego ve a lo siguiente
-- Puedes consultar en buscadores, no puedes usas ninguna IA ni copiar la solución de ningún lugar. Se busca evaluar tu capacidad de razonamiento y solución de problemas.
+-   JavaScript.
+-   Vite.
+-   Vitest.
+
+## Requirements
+
+-   Node.js v23.9.0
+-   npm v11.2.0
+
+## Documentation
+
+### Installation
+
+1. Clone this repo
+
+```bash
+$ git clone https://github.com/antoniofelices/js-test-level-fizz-buzz .
+```
+
+2. Install packages
+
+```bash
+$ npm install
+```
+
+3. Run Vite
+
+```bash
+$ npm run dev
+```
+
+4. Run tests
+
+```bash
+$ npm test:watch
+```
+
+## Future Improvements
+
+-   Improve styles. Customise design and behaviour.
+-   Implement coverage...!
+
+## Contributing
+
+### Code of Conduct
+
+Studio Moare has adopted the Contributor Covenant Code of Conduct that we expect project participants to adhere to. [Please read the full text](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) so that you can understand what actions will and will not be tolerated.
