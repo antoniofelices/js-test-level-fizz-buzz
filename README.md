@@ -53,6 +53,7 @@ $ npm test:watch
 ## Future Improvements
 
 -   Improve styles. Customise design and behaviour.
+-   Improve UI printResult. Change the innerHTML to a better approach.
 -   Implement coverage...!
 
 ## Contributing
