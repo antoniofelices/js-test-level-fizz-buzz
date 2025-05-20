@@ -9,4 +9,8 @@
             result: "" // Resultado esperado
             }
     }
- * */ 
+ * */
+
+const fizzBuzz = () => {}
+
+export default fizzBuzz
