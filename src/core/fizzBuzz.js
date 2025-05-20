@@ -1,37 +1,52 @@
-/**
- * Responsabilidad: gestionar la lógica de FizzBuzz
- * Recuerda que la estructura de las respuestas debe ser estructurada:
- *  {
-        status: "", // Código indicando éxito o error
-        message: "", // Mensaje
-        data: {
-            number: 0, // Número evaluado
-            result: "" // Resultado esperado
-            }
-    }
- * */
+import results from '@data/results'
 
-const calculateFizzBuzz = () => {
-    //Si el número ingresado es divisible por 3, se muestra Fizz = 0.
-    //Si el número ingresado es divisible por 5, se muestra Buzz Buzz = 1
-    //Si el número ingresado es divisible por 3 y 5, se muestra FizzBuzz = 2
-    //Si el número ingresado no es divisible ni por 3 ni por 5, se muestra el número mismo = 99
-    //Return a number
-}
+const calculateFizzBuzz = (value) => {
+    let message = ''
+    let output = ''
+    let result = {}
+    const messageFizz = 'El número es divisible por 3'
+    const messageBuzz = 'El número es divisible por 5'
+    const messageFizzBuzz = 'El número es divisible por 3 y por 15'
+    const wordFizz = 'Fizz'
+    const wordBuzz = 'Buzz'
+    const wordFizzBuzz = 'FizzBuzz'
 
-const saveResult = () => {
-    // Recibe number de funcion calculateFizzBuzz
-    // Condicional
-    // Almacenar objeto en const results
-    const result = calculateFizzBuzz()
-    const resultToSave = {
-        status: '',
-        message: '',
+    // if (value % 5 != 0) return `${value}`
+    // if (value % 3 != 0) return `${value}`
+
+    message =
+        value % 15
+            ? value % 3
+                ? value % 5
+                    ? ''
+                    : messageBuzz
+                : messageFizz
+            : messageFizzBuzz
+
+    output =
+        value % 15
+            ? value % 3
+                ? value % 5
+                    ? ''
+                    : wordBuzz
+                : wordFizz
+            : wordFizzBuzz
+
+    result = {
+        status: 'ok',
+        message: message,
         data: {
-            number: 0,
-            result: '',
+            input: value,
+            output: output,
         },
     }
+
+    return result
+}
+
+const saveResult = (value) => {
+    const resultToSave = calculateFizzBuzz(value)
+    results.push(resultToSave)
 }
 
 export { calculateFizzBuzz, saveResult }

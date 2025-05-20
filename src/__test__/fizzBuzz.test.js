@@ -1,68 +1,41 @@
-import { expect, describe, test } from '@jest/globals'
-import { describe, it, expect } from 'vitest'
+// import { expect, describe, test } from '@jest/globals'
+import { describe, it, expect, test } from 'vitest'
 
-import { fizzBuzz } from '@core/fizzBuzz'
+import { calculateFizzBuzz } from '@core/fizzBuzz'
 
 describe('FizzBuzz test for multiples of 3 and 5', () => {
     test('returns Fizz when multiple of 3', () => {
-        // Gherking test
-        /**
-         * Scenario: Número divisible por 3
-         * Given un número 9
-         * When el número es procesado
-         * Then se muestra "Fizz"
-         */
-
-        // Arrange: Preparar el escenario
         let valor_entrada = 9
         let respuesta_esperada = {
-            status: 'ok', // Código indicando éxito
-            message: 'El número es divisible por 3', // Mensaje de validación
+            status: 'ok',
+            message: 'El número es divisible por 3',
             data: {
-                input: 9, // Número evaluado
-                output: 'Fizz', // Resultado esperado
+                input: 9,
+                output: 'Fizz',
             },
         }
 
-        // Act: ejecutar el escenario
-        let resultado = fizzBuzz(valor_entrada)
+        let resultado = calculateFizzBuzz(valor_entrada)
 
-        // Assert: Comprobar el escenario
-        expect(typeof resultado.data.input).toBe('number') // valida que input sea un número
-        expect(resultado).toEqual(respuesta_esperada) // valida estructura de respuesta
-        expect(resultado.data.output).toBe('Fizz') // valida que el valor output corresponda al expect
+        expect(typeof resultado.data.input).toBe('number')
+        expect(resultado).toEqual(respuesta_esperada)
+        expect(resultado.data.output).toBe('Fizz')
     })
-
     test('returns Buzz when multiple of 5', () => {
-        //Gherking test
-        /**
-         * Scenario: Número divisible por 5
-         * Given un número 10
-         * When el número es procesado
-         * Then se muestra "Buzz"
-         */
-        // Arrange
-        // Act
-        // Assert
-    })
+        let valueInput = 10
+        let expectedReturn = {
+            status: 'ok',
+            message: 'El número es divisible por 5',
+            data: {
+                input: 10,
+                output: 'Buzz',
+            },
+        }
 
-    test('returns FizzBuzz when multiple of 3 and 5', () => {
-        //Gherking test
-        /**
-         * Scenario: Número divisible por 3 y 5
-         * Given un número 15
-         * When el número es procesado
-         * Then se muestra "FizzBuzz"
-         */
-    })
+        let result = calculateFizzBuzz(valueInput)
 
-    test('returns number when is not multiple of 3 and 5', () => {
-        //Gherking test
-        /**
-         * Scenario: Número no divisible por 3 ni 5
-         * Given un número 8
-         * When el número es procesado
-         * Then se muestra el número ingresado
-         */
+        expect(typeof result.data.input).toBe('number')
+        expect(result).toEqual(expectedReturn)
+        expect(result.data.output).toBe('Buzz')
     })
 })
