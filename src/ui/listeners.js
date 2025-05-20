@@ -1,5 +1,5 @@
 import { formFizzBuzz, showErrorsParagraph } from '@ui/selectors'
-import { calculateFizzBuzz, saveResult } from '@core/fizzBuzz'
+import { createEntryObject, saveEntryObject } from '@core/fizzBuzz'
 import printResult from '@ui/printResult'
 
 const sendForm = () => {
@@ -10,7 +10,6 @@ const sendForm = () => {
 
             let numberToTest = 0
             const messageNoNumber = `No has introducido un numero`
-            let result = 0
 
             numberToTest = parseInt(
                 document.getElementById('number-to-test').value
@@ -19,9 +18,8 @@ const sendForm = () => {
             if (isNaN(numberToTest) || !numberToTest)
                 return (showErrorsParagraph.innerHTML = messageNoNumber)
 
-            result = calculateFizzBuzz(numberToTest)
-            saveResult(numberToTest)
-            printResult(result)
+            saveEntryObject(numberToTest)
+            printResult(createEntryObject(numberToTest))
             formFizzBuzz.reset()
         },
         false
