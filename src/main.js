@@ -1,6 +1,6 @@
 import './styles/main.css'
-import listeners from '@ui/listeners'
+import { sendForm } from '@ui/listeners'
 
 document.addEventListener('DOMContentLoaded', () => {
-    listeners()
+    sendForm()
 })

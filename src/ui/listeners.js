@@ -28,4 +28,4 @@ const sendForm = () => {
     )
 }
 
-export default sendForm
+export { sendForm }
