@@ -1,11 +1,11 @@
-import { describe, it, expect, test } from 'vitest'
+import { describe, it, expect } from 'vitest'
 
 import { calculateFizzBuzz } from '@core/fizzBuzz'
 
 describe('FizzBuzz test for multiples of 3 and 5', () => {
-    test('returns Fizz when multiple of 3', () => {
-        let valor_entrada = 9
-        let respuesta_esperada = {
+    it('returns Fizz when multiple of 3', () => {
+        let valueInput = 9
+        let expectedReturn = {
             status: 'ok',
             message: 'El número es divisible por 3',
             data: {
@@ -14,13 +14,13 @@ describe('FizzBuzz test for multiples of 3 and 5', () => {
             },
         }
 
-        let resultado = calculateFizzBuzz(valor_entrada)
+        let result = calculateFizzBuzz(valueInput)
 
-        expect(typeof resultado.data.input).toBe('number')
-        expect(resultado).toEqual(respuesta_esperada)
-        expect(resultado.data.output).toBe('Fizz')
+        expect(typeof result.data.input).toBe('number')
+        expect(result).toEqual(expectedReturn)
+        expect(result.data.output).toBe('Fizz')
     })
-    test('returns Buzz when multiple of 5', () => {
+    it('returns Buzz when multiple of 5', () => {
         let valueInput = 10
         let expectedReturn = {
             status: 'ok',
@@ -37,20 +37,8 @@ describe('FizzBuzz test for multiples of 3 and 5', () => {
         expect(result).toEqual(expectedReturn)
         expect(result.data.output).toBe('Buzz')
     })
-    test.skip('returns Buzz when multiple of 5', () => {
-        //Gherking test
-        /**
-         * Scenario: Número divisible por 5
-         * Given un número 10
-         * When el número es procesado
-         * Then se muestra "Buzz"
-         */
-        // Arrange
-        // Act
-        // Assert
-    })
 
-    test.skip('returns FizzBuzz when multiple of 3 and 5', () => {
+    it.skip('returns FizzBuzz when multiple of 3 and 5', () => {
         //Gherking test
         /**
          * Scenario: Número divisible por 3 y 5
@@ -60,7 +48,7 @@ describe('FizzBuzz test for multiples of 3 and 5', () => {
          */
     })
 
-    test.skip('returns number when is not multiple of 3 and 5', () => {
+    it.skip('returns number when is not multiple of 3 and 5', () => {
         //Gherking test
         /**
          * Scenario: Número no divisible por 3 ni 5
