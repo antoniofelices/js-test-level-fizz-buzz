@@ -11,9 +11,6 @@ const calculateFizzBuzz = (value) => {
     const wordBuzz = 'Buzz'
     const wordFizzBuzz = 'FizzBuzz'
 
-    // if (value % 5 != 0) return `${value}`
-    // if (value % 3 != 0) return `${value}`
-
     message =
         value % 15
             ? value % 3
