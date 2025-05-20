@@ -1,6 +1,6 @@
 import results from '@data/results'
 
-const calculateFizzBuzz = (value) => {
+const createEntryObject = (value) => {
     let statusCode = ''
     let message = ''
     let output = ''
@@ -55,9 +55,9 @@ const calculateFizzBuzz = (value) => {
     return result
 }
 
-const saveResult = (value) => {
-    const resultToSave = calculateFizzBuzz(value)
+const saveEntryObject = (value) => {
+    const resultToSave = createEntryObject(value)
     results.push(resultToSave)
 }
 
-export { calculateFizzBuzz, saveResult }
+export { createEntryObject, saveEntryObject }

@@ -1,5 +1,5 @@
 import { formFizzBuzz, showErrorsParagraph } from '@ui/selectors'
-import { calculateFizzBuzz, saveResult } from '@core/fizzBuzz'
+import { createEntryObject, saveEntryObject } from '@core/fizzBuzz'
 import printResult from '@ui/printResult'
 
 const sendForm = () => {
@@ -19,8 +19,8 @@ const sendForm = () => {
             if (isNaN(numberToTest) || !numberToTest)
                 return (showErrorsParagraph.innerHTML = messageNoNumber)
 
-            result = calculateFizzBuzz(numberToTest)
-            saveResult(numberToTest)
+            result = createEntryObject(numberToTest)
+            saveEntryObject(numberToTest)
             printResult(result)
             formFizzBuzz.reset()
         },

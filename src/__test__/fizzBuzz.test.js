@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { calculateFizzBuzz } from '@core/fizzBuzz'
+import { createEntryObject } from '@core/fizzBuzz'
 
 describe('FizzBuzz test for multiples of 3', () => {
     it('returns Fizz when multiple of 3', () => {
@@ -13,7 +13,7 @@ describe('FizzBuzz test for multiples of 3', () => {
             },
         }
 
-        let result = calculateFizzBuzz(valueInput)
+        let result = createEntryObject(valueInput)
 
         expect(typeof result.data.input).toBe('number')
         expect(result).toEqual(expectedReturn)
@@ -30,7 +30,7 @@ describe('FizzBuzz test for multiples of 3', () => {
             },
         }
 
-        let result = calculateFizzBuzz(valueInput)
+        let result = createEntryObject(valueInput)
 
         expect(typeof result.data.input).toBe('number')
         expect(result).toEqual(expectedReturn)
@@ -48,7 +48,7 @@ describe('FizzBuzz test for multiples of 3', () => {
             },
         }
 
-        let result = calculateFizzBuzz(valueInput)
+        let result = createEntryObject(valueInput)
 
         expect(typeof result.data.input).toBe('number')
         expect(result).toEqual(expectedReturn)
@@ -66,7 +66,7 @@ describe('FizzBuzz test for multiples of 3', () => {
             },
         }
 
-        let result = calculateFizzBuzz(valueInput)
+        let result = createEntryObject(valueInput)
 
         expect(typeof result.data.input).toBe('number')
         expect(result).toEqual(expectedReturn)
