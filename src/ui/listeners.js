@@ -10,7 +10,6 @@ const sendForm = () => {
 
             let numberToTest = 0
             const messageNoNumber = `No has introducido un numero`
-            let result = 0
 
             numberToTest = parseInt(
                 document.getElementById('number-to-test').value
@@ -19,9 +18,8 @@ const sendForm = () => {
             if (isNaN(numberToTest) || !numberToTest)
                 return (showErrorsParagraph.innerHTML = messageNoNumber)
 
-            result = createEntryObject(numberToTest)
             saveEntryObject(numberToTest)
-            printResult(result)
+            printResult(createEntryObject(numberToTest))
             formFizzBuzz.reset()
         },
         false
