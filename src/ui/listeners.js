@@ -21,8 +21,8 @@ const sendForm = () => {
 
             result = calculateFizzBuzz(numberToTest)
             saveResult(numberToTest)
-
             printResult(result)
+            formFizzBuzz.reset()
         },
         false
     )
